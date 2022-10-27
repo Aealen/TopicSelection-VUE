@@ -8,6 +8,7 @@ import Login from "../components/Login";
 import Regist from "../components/Regist";
 import Workspace from "../components/workspace";
 import Me from "../components/me"
+import AddArticle from "../components/AddArticle";
 
 Vue.use(Router)
 
@@ -17,7 +18,15 @@ export default new Router({
       component: BottomMenu,
       children:[
         {path:'/me',component:Me},
-        {path:'/workspace',component:Workspace},
+        {
+          path:'/workspace',
+          component:Workspace,
+          children:[{
+              path:'addarticle',
+              component:AddArticle
+            }
+          ]
+        },
 
       ]
     }, {

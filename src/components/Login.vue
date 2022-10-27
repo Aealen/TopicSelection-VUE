@@ -88,6 +88,7 @@ export default {
             sessionStorage.setItem('user_account',this.respData.s_account)
             sessionStorage.setItem('user_name',this.respData.s_name)
             sessionStorage.setItem('user_role','0')
+            sessionStorage.setItem('s_select',this.respData.s_select)
             this.$router.push("/me")
           }else {
             this.showPopup('pwdErr');
