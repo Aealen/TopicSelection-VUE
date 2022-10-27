@@ -21,11 +21,7 @@ export default new Router({
         {
           path:'/workspace',
           component:Workspace,
-          children:[{
-              path:'addarticle',
-              component:AddArticle
-            }
-          ]
+
         },
 
       ]
@@ -35,6 +31,9 @@ export default new Router({
     },{
       path:'/regist',
       component:Regist
+    },{
+    path:'addarticle',
+    component:AddArticle
     }
 
   ]

@@ -2,7 +2,6 @@
 <div>
   <router-view></router-view>
 
-
   <div class="footer">
     <el-row :gutter="4" style="">
       <el-col :span="12">

@@ -73,7 +73,6 @@ export default {
     login:function (){
       if (this.role==0){
         //学生登陆
-
         let url="apis/student/byaccount/"+this.account
         //axios
         this.$axios
@@ -86,6 +85,7 @@ export default {
         }else {
           if (this.respData.s_password===this.password){
             sessionStorage.setItem('user_account',this.respData.s_account)
+            sessionStorage.setItem('user_id',this.respData.sid)
             sessionStorage.setItem('user_name',this.respData.s_name)
             sessionStorage.setItem('user_role','0')
             sessionStorage.setItem('s_select',this.respData.s_select)
@@ -94,7 +94,6 @@ export default {
             this.showPopup('pwdErr');
           }
         }
-
       }else if (this.role==1){
         //教师登陆
 

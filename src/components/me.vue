@@ -55,6 +55,12 @@
       </span>
 
     </div>
+
+    <cube-button
+      class="logoutBtn"
+      @click="logout()"
+    >注销</cube-button>
+
     <BottomMenu/>
 
   </div>
@@ -107,6 +113,10 @@ export default {
       }
 
     },
+    logout:function () {
+        sessionStorage.clear()
+      this.$router.push("/login")
+    }
 
 
   },
@@ -144,6 +154,16 @@ export default {
 
 .SelectionInfo{
 
+}
+
+.logoutBtn{
+  margin-top: 30px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #E6A23C;
+  font-size: 20px;
+  position: fixed;
+  bottom:70px
 }
 
 
