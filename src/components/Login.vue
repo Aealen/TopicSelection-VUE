@@ -25,9 +25,14 @@
     @click="login()"
   >登陆</cube-button>
 
+  <router-link class="registTag" to="./regist">前往注册</router-link>
+
 
   <cube-popup class="noSuchUser" type="my-popup" :mask="false" ref="noSuchUser">
     查无此人!!
+  </cube-popup>
+  <cube-popup class="noSuchUser" type="my-popup" :mask="false" ref="pwdErr">
+    密码错误!!
   </cube-popup>
 </div>
 </template>
@@ -84,6 +89,8 @@ export default {
             sessionStorage.setItem('user_name',this.respData.s_name)
             sessionStorage.setItem('user_role','0')
             this.$router.push("/me")
+          }else {
+            this.showPopup('pwdErr');
           }
         }
 
@@ -150,6 +157,11 @@ export default {
   height: 10%;
   margin-top: 45%;
   border-radius: 12px;
+}
+.registTag{
+  position: fixed;
+  bottom:5px;
+  right: 5px;
 }
 
 </style>

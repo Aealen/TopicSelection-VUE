@@ -8,14 +8,16 @@
       <el-col :span="12">
         <router-link to="/workspace">
           <div class="grid-content ">
+            <i class="el-icon-folder"/>
+
             工作台
           </div>
         </router-link>
-
       </el-col>
       <el-col :span="12">
         <router-link to="/me">
           <div class="grid-content ">
+            <i class="el-icon-user"/>
             我的
           </div>
         </router-link>

@@ -5,24 +5,28 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import BottomMenu from "../components/BottomMenu";
 import Login from "../components/Login";
+import Regist from "../components/Regist";
+import Workspace from "../components/workspace";
+import Me from "../components/me"
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
-      name: 'BottomMenu',
       component: BottomMenu,
       children:[
-        {path:'/me',component:()=>import('../components/me')},
-        {path:'/workspace',component:()=>import('../components/workspace')},
+        {path:'/me',component:Me},
+        {path:'/workspace',component:Workspace},
 
       ]
-    },
-    {
+    }, {
       path:'/login',
       component:Login
+    },{
+      path:'/regist',
+      component:Regist
     }
+
   ]
 })
