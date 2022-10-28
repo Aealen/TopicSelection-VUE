@@ -1,8 +1,7 @@
 <template>
 <div>
   <student-work-space v-if="user_role==0"/>
-  <teacher-work-space v-if="user_role==1"/>
-
+  <teacher-work-space style="margin-right: 10px" v-if="user_role==1"/>
   <BottomMenu/>
 </div>
 </template>

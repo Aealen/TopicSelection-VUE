@@ -133,7 +133,6 @@ export default {
   },
   mounted() {
     this.getAllArticle()
-    this.screenHeight=document.documentElement.clientHeight
   }
 }
 </script>
