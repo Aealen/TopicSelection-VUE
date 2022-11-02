@@ -47,8 +47,6 @@ export default {
       password:"",
 
       respData:[],
-
-
       placeholderAccount:"请输入账号...",
       placeholderPassword:"请输入密码...",
       eye:{
